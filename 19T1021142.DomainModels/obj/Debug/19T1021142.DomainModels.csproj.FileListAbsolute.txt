@@ -1,0 +1,6 @@
+E:\lap_trinh_web_C#\19T1021142\19T1021142.DomainModels\bin\Debug\19T1021142.DomainModels.dll
+E:\lap_trinh_web_C#\19T1021142\19T1021142.DomainModels\bin\Debug\19T1021142.DomainModels.pdb
+E:\lap_trinh_web_C#\19T1021142\19T1021142.DomainModels\obj\Debug\19T1021142.DomainModels.csproj.AssemblyReference.cache
+E:\lap_trinh_web_C#\19T1021142\19T1021142.DomainModels\obj\Debug\19T1021142.DomainModels.csproj.CoreCompileInputs.cache
+E:\lap_trinh_web_C#\19T1021142\19T1021142.DomainModels\obj\Debug\19T1021142.DomainModels.dll
+E:\lap_trinh_web_C#\19T1021142\19T1021142.DomainModels\obj\Debug\19T1021142.DomainModels.pdb

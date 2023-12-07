@@ -1,0 +1,77 @@
+﻿@model _19T1021142.Web.Models.EmployeeSearchOutput
+@{
+    Layout = null;
+}
+<style>
+    .flexBox {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .flexItem {
+        width: calc(100%/3);
+        padding: 8px;
+        display: flex;
+    }
+
+    .flexItemMargin {
+        border: 1px solid #ccc;
+        display: flex;
+        padding: 12px;
+        width: 100%;
+    }
+
+    .info {
+        padding: 0 12px;
+    }
+</style>
+<!--Kết quả tìm kiếm-->
+<p style="margin-top:10px;">
+    có <strong>@Model.RowCount</strong> nhân viên trong tổng số <strong> @Model.PageCount</strong> trang
+</p>
+<div class="table-responsive">
+    <div class='flexBox'>
+        @foreach (var item in Model.Data)
+        {
+            <div class='flexItem'>
+                <div class='flexItemMargin'>
+                    <img class='img' width="100" height="100" src="@item.Photo">
+                    <div class="info">
+                        <p> <b>Họ và tên: </b> @item.LastName @item.FirstName </p>
+                        <p> <b>Ngày sinh: </b> @item.BirthDate </p>
+                        <p> <b>Ghi chú: </b> @item.Notes </p>
+                        <p> <b>Email: </b> @item.Email </p> 
+                    </div>
+                    <span class="btn">
+                        <a href="~/Employee/Edit/@item.EmployeeID" class="btn btn-sm btn-primary">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                        <a href="~/Employee/Delete/@item.EmployeeID" class="btn btn-xs btn-danger">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </span>
+                </div>
+
+            </div>
+
+        }
+
+    </div>
+    <div class="text-center">
+        <ul class="pagination">
+            @for (int i = 1; i <= Model.PageCount; i++)
+            {
+                if (i == Model.Page)
+                {
+                    <li class="active"><a href="#">@i</a></li>
+                }
+                else
+                {
+                    <li><a href="javascipts:;" onclick="doSearch(@i)"> @i</a></li>
+                }
+            }
+
+        </ul>
+    </div>
+</div>
+
